@@ -35,6 +35,13 @@ to the require section of your application's `composer.json` file.
 		//show full url (for example in case of a API)
 		'absoluteUrl' => false,
 		'databaseComponent' => 'db' // The used database component by the image manager, this defaults to the Yii::$app->db component
+		's3Url' => 'http://localhost:9001/',
+        's3Configuration' => [
+            'key' => 'key',
+            'secret' => 'key123',
+            'endpoint' => 'http://localhost:9000',
+            'defaultBucket' => 'default',
+        ]
 	],
 ],
 ```
@@ -63,10 +70,6 @@ and in `modules` section, for example:
 
 Usage
 -----
-To reach the imagemanager module go to:
-```
-http://www.example.com/imagemanager
-```
 ![Image manager module](/docs/images/img_doc-image-manager.jpg)
 ![Image manager module cropper](/docs/images/img_doc-image-manager-crop.jpg)
 

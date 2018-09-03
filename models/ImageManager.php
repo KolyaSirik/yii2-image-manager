@@ -49,6 +49,7 @@ class ImageManager extends ActiveRecord
             'createdBy',
             'modifiedBy',
             'tags',
+            'sizes',
         ];
     }
 

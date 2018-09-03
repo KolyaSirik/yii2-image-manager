@@ -22,7 +22,8 @@
         "yiisoft/yii2-mongodb": "^2.1",
         "unclead/yii2-multiple-input": "~2.0",
         "kartik-v/yii2-widget-select2": "@dev",
-        "rmrevin/yii2-fontawesome": "~2.17"
+        "rmrevin/yii2-fontawesome": "~2.17",
+        "aws/aws-sdk-php": "^3.63"
     },
     "autoload": {
         "psr-4": {

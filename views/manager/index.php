@@ -216,8 +216,10 @@ $this->title = Yii::t('imagemanager','File manager');
                     <?= Html::button('Update tags', ['class' => 'btn btn-primary btn-block', 'id' => 'update-tags']) ?>
 
                     <div class="created"></div>
-                    <div class="fileSize"></div>
-                    <div class="dimensions"><span class="dimension-width"></span> &times; <span class="dimension-height"></span></div>
+                    <?php if (!\Yii::$app->imagemanager->useS3): ?>
+                        <div class="fileSize"></div>
+                        <div class="dimensions"><span class="dimension-width"></span> &times; <span class="dimension-height"></span></div>
+                    <?php endif; ?>
                     <?php if ($canRemoveImage): ?>
                         <a href="#" class="btn btn-xs btn-danger delete-image-item" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> <?=Yii::t('imagemanager','Delete')?></a>
                     <?php endif; ?>
